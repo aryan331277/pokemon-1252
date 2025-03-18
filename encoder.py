@@ -9,3 +9,9 @@ encoder.add(layers.Conv2D(256, (4, 4), strides=2, padding="same", activation="re
 encoder.add(layers.Conv2D(512, (4, 4), strides=2, padding="same", activation="relu"))  # 16x16
 encoder.add(layers.Flatten())
 
+encoder.add(layers.Dense(LATENT_DIM, name="z_mean"))  
+encoder.add(layers.Dense(LATENT_DIM, name="z_log_var"))  
+
+encoder.summary()
+
+
