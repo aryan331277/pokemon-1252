@@ -9,4 +9,5 @@ for path in tqdm(image_paths):
     train_images.append(img)
     
 train_images = np.array(train_images)
-train_images=(train_image/255
+#train_images=(train_images-511.5)/511.5
+train_images=train_image/255
